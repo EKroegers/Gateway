@@ -1,0 +1,21 @@
+#Gateway-Frame {
+  z-index: 999;
+
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#Gateway-Frame #Minimized {
+  display: none;
+}
+
+#Gateway-Frame-Container {
+  display: block;
+  z-index: 1000;
+  cursor: move;
+
+  padding: 10px;
+  color: #fff;
+  background-color: #2196f3;
+}
