@@ -1,7 +1,7 @@
 {
   "name": "gateway",
   "version": "1.0.0",
-  "description": "A React-based library for components mirroring the functionality of a desktop",
+  "description": "A React component library for components mirroring the functionality of a desktop",
   "main": "dist/main.js",
   "module": "dist/module.js",
   "author": "Ethan Kroeger",
