@@ -5,4 +5,6 @@ export interface Props {
   children: React.ReactNode;
   // Boolean determining if the frame should be draggable
   isDraggable: boolean;
+  // ID That is used to connect the Frame to another interactable element
+  connectionID: number;
 }
