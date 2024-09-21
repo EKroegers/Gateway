@@ -1,21 +1,23 @@
-#Gateway-Frame {
-  z-index: 999;
-
-  background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
-  text-align: center;
-
-  &.Minimized {
-    display: none;
-  }
-}
-
-#Gateway-Frame-Container {
+[id^='Gateway-Frame-Container'] {
+  position: absolute;
   display: block;
   z-index: 1000;
   cursor: move;
 
   padding: 10px;
-  color: #fff;
   background-color: #2196f3;
+  border: 1px solid #d3d3d3;
+}
+
+#Gateway-Frame {
+  position: relative;
+  z-index: 1;
+
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+.Minimized {
+  display: none;
 }

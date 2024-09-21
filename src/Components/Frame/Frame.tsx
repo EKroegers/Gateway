@@ -5,13 +5,13 @@ import makeDraggable from '../../utils/makeDraggable';
 import { Props } from './Frame.types';
 import './Frame.css';
 
-const Frame = ({ children, isDraggable, connectionID }: Props) => {
+const Frame = ({ children, isDraggable = false, connectionID }: Props) => {
   const [minimized, setMinimized] = useState(false);
   const frameComponentBase = (
     <div
       data-testid="frame"
-      id={`Gateway-Frame-Container ID_${connectionID}`}
-      className={`${minimized ? 'Minimized' : ''}`}
+      id={`Gateway-Frame-Container ID_${connectionID ?? '0'}`}
+      className={minimized ? 'Minimized' : ''}
     >
       <button
         onClick={() => {
