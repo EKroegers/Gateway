@@ -21,11 +21,9 @@ const Frame = ({ children, isDraggable }: Props) => {
       <div id="Gateway-Frame">{children}</div>
     </div>
   );
-  if (isDraggable) {
-    return makeDraggable(frameComponentBase, 'Gateway-Frame-Container');
-  } else {
-    return frameComponentBase;
-  }
+  return isDraggable
+    ? makeDraggable(frameComponentBase, 'Gateway-Frame-Container')
+    : frameComponentBase;
 };
 
 export default Frame;
