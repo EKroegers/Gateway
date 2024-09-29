@@ -1,21 +1,19 @@
-import { useState } from 'react';
-
 import makeDraggable from '../../utils/makeDraggable';
 
 import { Props } from './Frame.types';
 import './Frame.css';
 
 const Frame = ({ children, isDraggable = false, connectionID }: Props) => {
-  const [minimized, setMinimized] = useState(false);
   const frameComponentBase = (
     <div
       data-testid="frame"
       id={`Gateway-Frame-Container ID_${connectionID ?? '0'}`}
-      className={minimized ? 'Minimized' : ''}
     >
       <button
         onClick={() => {
-          setMinimized(true);
+          document
+            .getElementById(`Gateway-Frame-Container ID_${connectionID ?? '0'}`)
+            ?.classList.toggle('Minimized');
         }}
         id="Gateway-Frame-Close-Button"
       />
