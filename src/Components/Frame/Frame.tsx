@@ -4,16 +4,13 @@ import { Props } from './Frame.types';
 import './Frame.css';
 
 const Frame = ({ children, isDraggable = false, connectionID }: Props) => {
+  const FRAME_ID = `Gateway-Frame-Container ID_${connectionID ?? '0'}`;
+
   const frameComponentBase = (
-    <div
-      data-testid="frame"
-      id={`Gateway-Frame-Container ID_${connectionID ?? '0'}`}
-    >
+    <div data-testid="frame" id={FRAME_ID}>
       <button
         onClick={() => {
-          document
-            .getElementById(`Gateway-Frame-Container ID_${connectionID ?? '0'}`)
-            ?.classList.toggle('Minimized');
+          document.getElementById(FRAME_ID)?.classList.toggle('Minimized');
         }}
         id="Gateway-Frame-Close-Button"
       />
@@ -21,7 +18,7 @@ const Frame = ({ children, isDraggable = false, connectionID }: Props) => {
     </div>
   );
   return isDraggable
-    ? makeDraggable(frameComponentBase, 'Gateway-Frame-Container')
+    ? makeDraggable(frameComponentBase, FRAME_ID)
     : frameComponentBase;
 };
 

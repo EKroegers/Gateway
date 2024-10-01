@@ -28,7 +28,7 @@ export const FrameOne = {
   args: {
     children: 'These are the Frame One children',
     isDraggable: true,
-    connectionID: 0,
+    connectionID: 1,
   },
 };
 export const FrameTwo = {
